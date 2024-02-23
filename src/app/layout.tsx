@@ -7,6 +7,7 @@ import clsx from "clsx"
 import { PrismicPreview } from "@prismicio/next";
 import { createClient, repositoryName } from "@/prismicio";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
     <html lang="en" className="bg-slate-900 text-slate-100">
       <body className={clsx(urbanist.className, "relative min-h-screen")}>
         <Analytics/>
+        <SpeedInsights/>
         <Header />
         {children}
         <Footer />
